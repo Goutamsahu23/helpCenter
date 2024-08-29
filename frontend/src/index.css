@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Header.css */
+
+/* styles.css */
+/* Ensure you have these styles applied for the modal */
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for buttons */
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Add some padding and margin for the form elements */
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="url"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  padding: 10px 150px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.request-btn {
+  padding: 10px 20px;
+  background: rgb(53, 53, 53);
+  color: white;
+  border: 2px solid rgb(107, 104, 104);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.request-btn:hover {
+  background-color: #0b0b0f;
+}
+
+
+/* SearchSection.css */
+.search-section {
+  background-color: #c1c4f0;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.search-section h1 {
+  font-size: 3em;
+  color: #2d2d2d;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.search-bar {
+  width: 80%;
+  max-width: 600px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  color: #2d2d2d;
+}
+
+.search-bar::placeholder {
+  color: #aaa;
+}
+
+
+/* CardSection.css */
+.card-section {
+  background-color: #4e4edf;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px 300px;
+  background-color: #ffffff;
+}
+
+.card {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 1.5em;
+  color: #2d2d2d;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+
+/* Card.css */
+.card {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Custom overlay to dim the background when the modal is open */
+.custom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+/* Custom modal styles */
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+/* Modal header */
+.custom-modal h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Modal content */
+.custom-modal p {
+  margin: 16px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Modal link */
+.custom-modal a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.custom-modal a:hover {
+  text-decoration: underline;
+}
+
+/* Close button */
+.custom-modal button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-modal button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Footer Styles */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 32px;
+  margin-top: 64px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer h3 {
+  font-weight: bold;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer-center {
+  text-align: center;
+  margin-top: 32px;
+}
+
+
